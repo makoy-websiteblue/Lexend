@@ -27,10 +27,10 @@ export default function Header1() {
   };
 
   useEffect(() => {
-    prevScrollPosRef.current = window.pageYOffset;
+    prevScrollPosRef.current = window.scrollY;
     
     const handleScrollImmediate = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       const isScrollingUp = currentScrollPos < prevScrollPosRef.current;
 
       setScrollingUp(currentScrollPos <= 80 ? false : isScrollingUp);
